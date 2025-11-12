@@ -1,0 +1,78 @@
+
+:root{
+  --bg: #f6efe8; /* warm neutral */
+  --muted: #7b756d;
+  --accent: #111111;
+  --card-shadow: 0 8px 24px rgba(17,17,17,0.06);
+  --gap: 2rem;
+  --max-h: 80vh;
+  --accent-2: #c5b7a5;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--accent);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+header{
+  position:fixed;top:0;left:0;right:0;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;background:rgba(246,239,232,0.6);backdrop-filter: blur(6px);z-index:40;border-bottom:1px solid rgba(0,0,0,0.03);
+}
+.logo{display:flex;gap:12px;align-items:center}
+.logo h1{font-family:'Playfair Display', serif;margin:0;font-size:20px;font-weight:700;letter-spacing:0.02em}
+.logo p{margin:0;font-size:12px;color:var(--muted)}
+
+nav a{color:var(--accent);text-decoration:none;margin-left:18px;font-size:14px}
+
+main{padding-top:92px;padding-left:24px;padding-right:24px}
+
+/* Horizontal gallery wrapper */
+.hall{
+  display:flex;gap:var(--gap);align-items:center;padding:40px 24px;scroll-snap-type:x mandatory;overflow-x:auto;overflow-y:hidden;white-space:nowrap;scroll-behavior:smooth;padding-bottom:80px;min-height:68vh;
+}
+.section{
+  scroll-snap-align:center;flex:0 0 calc(100vw - 160px);background:transparent;display:flex;flex-direction:column;gap:18px;align-items:flex-start;padding:20px 36px;border-radius:12px
+}
+.section h2{font-family:'Playfair Display', serif;font-size:36px;margin:0;color:var(--accent)}
+.section p.lead{color:var(--muted);max-width:58ch;margin-top:6px}
+
+/* Wall: horizontal row of paintings */
+.wall{display:flex;gap:22px;align-items:center;overflow:visible;padding-top:16px}
+.card{width:360px;flex:0 0 360px;border-radius:8px;background:white;box-shadow:var(--card-shadow);padding:12px;display:flex;flex-direction:column;gap:12px;transform:translateY(12px);opacity:0;transition:transform .6s ease,opacity .6s ease}
+.card img, .card .placeholder{
+  width:100%;height:calc(var(--max-h) * 0.35);object-fit:cover;border-radius:6px;display:block
+}
+.meta{display:flex;flex-direction:column;gap:6px}
+.meta .title{font-family:'Playfair Display', serif;font-size:16px}
+.meta .info{font-size:13px;color:var(--muted)}
+.card .actions{display:flex;gap:10px;margin-top:6px}
+.btn{background:transparent;border:1px solid rgba(0,0,0,0.08);padding:8px 12px;border-radius:8px;font-size:13px;text-decoration:none;color:var(--accent);cursor:pointer}
+.btn.primary{background:var(--accent);color:white;border:none}
+
+/* Sold style */
+.sold .card{filter:grayscale(80%) opacity(.9)}
+.sold .label-sold{font-size:12px;padding:6px 8px;border-radius:999px;background:rgba(0,0,0,0.06);display:inline-block}
+
+/* footer */
+footer{padding:48px 24px;color:var(--muted);border-top:1px solid rgba(0,0,0,0.03);margin-top:36px}
+.footer-grid{display:flex;justify-content:space-between;align-items:center;gap:24px}
+
+/* small screens */
+@media (max-width:900px){
+  .section{flex:0 0 calc(100vw - 56px)}
+  .card{width:280px;flex:0 0 280px}
+}
+
+/* visible animation class */
+.is-visible{opacity:1;transform:translateY(0)}
+
+/* lightbox */
+#lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);z-index:200}
+#lightboxInner{max-width:90vw;max-height:90vh;border-radius:10px;overflow:hidden;background:white;padding:14px;box-shadow:0 12px 40px rgba(0,0,0,0.5)}
+
+/* helper: thin separator */
+.sep{height:1px;background:rgba(0,0,0,0.03);margin:20px 0;border-radius:2px}

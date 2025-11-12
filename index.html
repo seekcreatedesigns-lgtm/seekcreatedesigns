@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Seek Create Designs — The Conversation of Colour</title>
+  <meta name="description" content="Seek Create Designs — abstract paintings focused on the conversation of colour." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <h1>Seek Create Designs</h1>
+    <p>the conversation of colour</p>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="current.html">Current</a>
+    <a href="sold.html">Sold</a>
+    <a href="prints.html">Prints</a>
+    <a href="commissions.html">Commissions</a>
+  </nav>
+</header>
+
+<main style="padding-top:110px;max-width:1100px;margin:0 auto;padding-left:24px;padding-right:24px;">
+  <section style="display:flex;flex-direction:column;gap:18px;padding:40px 8px;">
+    <h1 style="font-family:'Playfair Display', serif;font-size:44px;margin:0">Seek Create Designs</h1>
+    <p style="color:var(--muted);max-width:64ch;margin-top:6px;font-size:18px">Abstract paintings exploring the conversation of colour. Walk through curated rooms to see current work, prints, and commissions.</p>
+    <div style="display:flex;gap:12px;align-items:center;margin-top:10px">
+      <a class="btn primary" href="current.html">Enter Gallery</a>
+      <a class="btn" href="mailto:seekcreatedesigns@gmail.com?subject=General%20Enquiry">Email the artist</a>
+    </div>
+  </section>
+
+  <section style="margin-top:24px">
+    <h2 style="font-family:'Playfair Display', serif;font-size:28px;margin:0">Featured Work</h2>
+    <p style="color:var(--muted);margin-top:8px">Selected highlights from the latest series.</p>
+    <div style="display:flex;gap:18px;margin-top:18px;flex-wrap:wrap">
+      <!-- small inline placeholders -->
+      <div style="width:300px;background:white;padding:10px;border-radius:8px;box-shadow:var(--card-shadow)">
+        <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" style="width:100%;height:220px;border-radius:6px;display:block">
+          <defs><linearGradient id="f1" x1="0" x2="1"><stop offset="0%" stop-color="#f6d9c3"/><stop offset="100%" stop-color="#9fb6d8"/></linearGradient></defs>
+          <rect width="100%" height="100%" fill="url(#f1)"/>
+        </svg>
+        <div style="font-family:'Playfair Display', serif;margin-top:10px">Convo I</div>
+        <div style="color:var(--muted);font-size:13px">60 x 80 cm · Acrylic</div>
+      </div>
+      <div style="width:300px;background:white;padding:10px;border-radius:8px;box-shadow:var(--card-shadow)">
+        <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" style="width:100%;height:220px;border-radius:6px;display:block">
+          <defs><linearGradient id="f2" x1="0" x2="1"><stop offset="0%" stop-color="#efe1d8"/><stop offset="100%" stop-color="#c9d7f8"/></linearGradient></defs>
+          <rect width="100%" height="100%" fill="url(#f2)"/>
+        </svg>
+        <div style="font-family:'Playfair Display', serif;margin-top:10px">Convo II</div>
+        <div style="color:var(--muted);font-size:13px">50 x 70 cm · Oil</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div style="font-family:'Playfair Display', serif;font-size:16px">Seek Create Designs</div>
+      <div style="color:var(--muted);font-size:13px">Abstract paintings — the conversation of colour</div>
+    </div>
+    <div style="text-align:right;color:var(--muted);font-size:13px">
+      <div>seekcreatedesigns@gmail.com</div>
+      <div style="margin-top:8px">Instagram: <a href="https://instagram.com/seekcreatedesigns" target="_blank" rel="noopener">@seekcreatedesigns</a></div>
+    </div>
+  </div>
+</footer>
+
+<div id="lightbox" style="display:none;" onclick="closeLightbox();">
+  <div id="lightboxInner"></div>
+  <button aria-label="Close" onclick="closeLightbox()" style="position:fixed;top:20px;right:20px;background:#fff;border-radius:999px;padding:8px 12px;border:none;cursor:pointer">Close</button>
+</div>
+
+</body>
+</html>

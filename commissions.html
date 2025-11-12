@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Seek Create Designs — The Conversation of Colour</title>
+  <meta name="description" content="Seek Create Designs — abstract paintings focused on the conversation of colour." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <h1>Seek Create Designs</h1>
+    <p>the conversation of colour</p>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="current.html">Current</a>
+    <a href="sold.html">Sold</a>
+    <a href="prints.html">Prints</a>
+    <a href="commissions.html">Commissions</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hall" aria-label="Gallery hallway">
+    <div id="commissions" class="section " tabindex="0" aria-labelledby="Commissions-title">
+      <h2 id="Commissions-title">Commissions</h2>
+      <p class="lead">Commission a bespoke piece: tell me the colours, size and mood. Typical turnaround: 4–8 weeks depending on scale.</p>
+      <div class="wall" role="list">
+        
+<figure class="card" role="listitem" id="card-com1">
+  <div class="placeholder">
+    <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;border-radius:6px;display:block">
+      <defs><linearGradient id="cg4" x1="0" x2="1"><stop offset="0%" stop-color="#f2e6de"/><stop offset="100%" stop-color="#dfeff2"/></linearGradient></defs>
+      <rect width="100%" height="100%" fill="url(#cg4)" />
+    </svg>
+  </div>
+  <figcaption class="meta">
+    <div class="title">Commission Example</div>
+    <div class="info">Example: 100 x 120 cm · Acrylic · Price varies</div>
+    <div class="actions">
+      <a class="btn" href="mailto:seekcreatedesigns@gmail.com?subject=Enquiry%20about%20Commission%20Example&body=Hi%20—%20I'm%20interested%20in%20Commission Example.">Enquire</a>
+      <a class="btn" href="#" onclick="zoomPlaceholder(event,this)">View</a>
+    </div>
+  </figcaption>
+</figure>
+
+      </div>
+      <div class="hint">Use ← → or swipe to walk along the gallery.</div>
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div style="font-family:'Playfair Display', serif;font-size:16px">Seek Create Designs</div>
+      <div style="color:var(--muted);font-size:13px">Abstract paintings — the conversation of colour</div>
+    </div>
+    <div style="text-align:right;color:var(--muted);font-size:13px">
+      <div>seekcreatedesigns@gmail.com</div>
+      <div style="margin-top:8px">Instagram: <a href="https://instagram.com/seekcreatedesigns" target="_blank" rel="noopener">@seekcreatedesigns</a></div>
+    </div>
+  </div>
+</footer>
+
+<div id="lightbox" style="display:none;" onclick="closeLightbox();">
+  <div id="lightboxInner"></div>
+  <button aria-label="Close" onclick="closeLightbox()" style="position:fixed;top:20px;right:20px;background:#fff;border-radius:999px;padding:8px 12px;border:none;cursor:pointer">Close</button>
+</div>
+
+</body>
+</html>
